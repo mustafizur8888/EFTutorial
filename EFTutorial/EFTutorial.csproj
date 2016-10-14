@@ -33,7 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,11 +52,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201610111642500_initial.cs" />
+    <Compile Include="Migrations\201610111642500_initial.Designer.cs">
+      <DependentUpon>201610111642500_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610111655131_teacher added.cs" />
+    <Compile Include="Migrations\201610111655131_teacher added.Designer.cs">
+      <DependentUpon>201610111655131_teacher added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610111657259_standardId added.cs" />
+    <Compile Include="Migrations\201610111657259_standardId added.Designer.cs">
+      <DependentUpon>201610111657259_standardId added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610111700157_teacherId.cs" />
+    <Compile Include="Migrations\201610111700157_teacherId.Designer.cs">
+      <DependentUpon>201610111700157_teacherId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610121516507_student address added.cs" />
+    <Compile Include="Migrations\201610121516507_student address added.Designer.cs">
+      <DependentUpon>201610121516507_student address added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610121524009_course added.cs" />
+    <Compile Include="Migrations\201610121524009_course added.Designer.cs">
+      <DependentUpon>201610121524009_course added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610140423248_make foregin key optional.cs" />
+    <Compile Include="Migrations\201610140423248_make foregin key optional.Designer.cs">
+      <DependentUpon>201610140423248_make foregin key optional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610140425247_make student height.cs" />
+    <Compile Include="Migrations\201610140425247_make student height.Designer.cs">
+      <DependentUpon>201610140425247_make student height.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolContext.cs" />
+    <Compile Include="Standard.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentAddress.cs" />
+    <Compile Include="Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610111642500_initial.resx">
+      <DependentUpon>201610111642500_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610111655131_teacher added.resx">
+      <DependentUpon>201610111655131_teacher added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610111657259_standardId added.resx">
+      <DependentUpon>201610111657259_standardId added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610111700157_teacherId.resx">
+      <DependentUpon>201610111700157_teacherId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610121516507_student address added.resx">
+      <DependentUpon>201610121516507_student address added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610121524009_course added.resx">
+      <DependentUpon>201610121524009_course added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610140423248_make foregin key optional.resx">
+      <DependentUpon>201610140423248_make foregin key optional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610140425247_make student height.resx">
+      <DependentUpon>201610140425247_make student height.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
